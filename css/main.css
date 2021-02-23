@@ -111,10 +111,10 @@ textarea {
     --clr-neutral-500: #434956;
     --clr-neutral-900: #020203;
   
-    --clr-primary-300: #b30b30;
-    --clr-primary-400: #3b03b0;
+    --clr-primary-300: #ed1b24;
+    --clr-primary-400: #0056a3;
   
-    --br: 1rem;
+    --br: 0rem;
     --flow-spacer:1rem;
   }
 
@@ -178,17 +178,19 @@ a:hover {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: var(--clr-primary-400);
-  background-color: #94b9db;
-  margin: 0 .5rem;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  margin: 0 
 }
+
+
+/*components */
 
 .container {
   max-width: 50rem;
-  margin: 0 auto;
+  margin: 0 1rem;
 }
 
-/*components */
 
 .flow-content > * + * {
   margin-top: var(--flow-spacer, 1em);
@@ -219,7 +221,6 @@ body {
 }
 .nav a {
   text-decoration: none;
-  color: #000;
   font-size: var(--fs-300);
 }
 
@@ -228,6 +229,11 @@ body {
   font-size: 2.15rem;
   color:rgb(56, 52, 52)
 
+}
+
+.remax-link {
+  color:var(--clr-primary-300);
+  letter-spacing: .095em ;
 }
 
 @media (min-width:40rem) {
@@ -240,15 +246,18 @@ body {
   .heading-title {
     font-size: 2.5rem;
   }
+  
 }
+
+
+
+
+/* main area styling */
 
 .hero-content {
   width:100%;
   
 }
-
-
-/* main area styling */
 
 .hero {
   background: url(../img/house-with-keys.jpg)no-repeat center center;
@@ -277,6 +286,9 @@ body {
   .hero-content {
     width:60%;
     text-align: center;
+  }
+  .container {
+    margin:0 auto;
   }
 }
 
@@ -315,6 +327,8 @@ body {
     grid-column: span 3;
   }
 }
+
+/*Designed to plug and play extra content in the HTML*/
 
 @media (min-width: 40em) {
   .article-grid > *:first-child {
@@ -375,7 +389,9 @@ body {
 .trademark a {
   text-decoration: none;
 }
-
+.primary .nav .underline a {
+  text-decoration: underline;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
